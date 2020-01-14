@@ -9,7 +9,7 @@ const User = ({ user, loading, getUser, getUserRepos, repos, match }) => {
     getUser(match.params.login);
     getUserRepos(match.params.login);
     //eslint-disable-next-line
-  });
+  }, []);
 
   // componentDidMount() {
   //   this.props.getUser(match.params.login);
