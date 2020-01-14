@@ -1,4 +1,4 @@
-import React, { Fragment } from 'react';
+import React from 'react';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import Navbar from './components/layout/Navbar';
 import Users from './components/users/Users';
@@ -58,8 +58,8 @@ class App extends React.Component {
     );
     this.setState({ repos: res.data, loading: false });
   };
-  // Clear user form state
 
+  // Clear user form state
   clearUsers = () => this.setState({ users: [], loading: false });
 
   // Set Alert
@@ -81,7 +81,7 @@ class App extends React.Component {
                 path='/'
                 exact
                 render={props => (
-                  <Fragment>
+                  <>
                     <Search
                       searchUsers={this.searchUsers}
                       clearUsers={this.clearUsers}
@@ -89,7 +89,7 @@ class App extends React.Component {
                       setAlert={this.setAlert}
                     />
                     <Users loading={loading} users={users} />
-                  </Fragment>
+                  </>
                 )}
               />
               <Route exact path='/about' component={About} />

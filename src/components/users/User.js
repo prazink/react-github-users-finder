@@ -10,6 +10,7 @@ class User extends Component {
     this.props.getUserRepos(this.props.match.params.login);
   }
 
+  // PropTypes Validation
   static propTypes = {
     loading: PropTypes.bool,
     user: PropTypes.object.isRequired,
@@ -17,6 +18,7 @@ class User extends Component {
     getUser: PropTypes.func.isRequired,
     getUserRepos: PropTypes.func.isRequired
   };
+
   render() {
     const {
       name,
