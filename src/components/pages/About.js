@@ -4,7 +4,7 @@ const About = () => {
     return (
         <>
             <h1>About this App</h1>
-            <p>App to search Github users</p>
+            <p>App to search Github users profile</p>
         </>
     )
 }
