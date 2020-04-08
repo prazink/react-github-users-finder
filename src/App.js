@@ -104,6 +104,7 @@ const App = () => {
               exact
               render={props => (
                 <>
+                  <h1>Test</h1>
                   <Search
                     searchUsers={searchUsers}
                     clearUsers={clearUsers}
